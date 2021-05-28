@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+
+<TabPane fx:controller="com.ziobrowski.controllers.MainController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <Tab text="Trains">
+        <fx:include fx:id="trainsTab" source="TrainsTabLayout.fxml"/>
+    </Tab>
+    <Tab text="Tickets">
+        <fx:include fx:id="ticketsTab" source="TicketsTabLayout.fxml"/>
+    </Tab>
+    <Tab text="Export">
+        <fx:include fx:id="exportTab" source="ExportTabLayout.fxml"/>
+    </Tab>
+</TabPane>
