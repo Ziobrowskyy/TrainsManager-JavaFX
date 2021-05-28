@@ -1,0 +1,4 @@
+firstName,lastName,discount,class,price,trainName
+John,Doe,NORMAL,THIRD,15.0000,train 2
+John,Doe,NORMAL,THIRD,15.0000,train 2
+Adam,KOwalski,STUDENT,FIRST,112.2000,train 5

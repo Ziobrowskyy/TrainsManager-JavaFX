@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+    <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<VBox fx:controller="com.ziobrowski.controllers.TicketsController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <TableView fx:id="ticketTableView">
+        <columns>
+            <TableColumn fx:id="trainNameColumn" text="Train" />
+            <TableColumn fx:id="firstNameColumn" text="First name" />
+            <TableColumn fx:id="lastNameColumn" text="Last name" />
+            <TableColumn fx:id="discountColumn" text="Type" />
+            <TableColumn fx:id="classColumn" text="Class" />
+            <TableColumn fx:id="priceColumn" text="Price" />
+        </columns>
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+        </columnResizePolicy>
+    </TableView>
+</VBox>
