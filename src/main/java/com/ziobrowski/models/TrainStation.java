@@ -1,4 +1,4 @@
-package com.ziobrowski.database;
+package com.ziobrowski.models;
 
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;

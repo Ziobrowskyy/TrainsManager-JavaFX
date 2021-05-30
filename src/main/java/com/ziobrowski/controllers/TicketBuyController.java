@@ -1,9 +1,9 @@
 package com.ziobrowski.controllers;
 
-import com.ziobrowski.database.Ticket;
-import com.ziobrowski.database.TicketClass;
-import com.ziobrowski.database.TicketDiscount;
-import com.ziobrowski.database.Train;
+import com.ziobrowski.models.Ticket;
+import com.ziobrowski.models.TicketClass;
+import com.ziobrowski.models.TicketDiscount;
+import com.ziobrowski.models.Train;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;

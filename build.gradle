@@ -7,8 +7,17 @@ plugins {
 repositories {
     mavenCentral()
 }
+dependencies {
+    implementation 'org.hibernate:hibernate-core:5.4.32.Final'
+    implementation 'org.hibernate:hibernate-gradle-plugin:5.4.32.Final'
+//    implementation 'org.hibernate.ogm:hibernate-ogm-mongodb:5.4.1.Final'
+    implementation 'org.springframework.data:spring-data-jpa:2.5.1'
+    implementation 'mysql:mysql-connector-java:5.1.13'
 
-
+//    implementation 'javax.persistence:javax.persistence-api:2.2'
+//    implementation 'android.arch.persistence.room:runtime:1.1.1'
+//    annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
+}
 javafx {
     version = "16"
     modules = [ 'javafx.controls', 'javafx.fxml' ]

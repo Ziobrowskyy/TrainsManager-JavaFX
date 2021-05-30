@@ -1,22 +1,36 @@
-package com.ziobrowski.database;
+package com.ziobrowski.models;
 
 import com.ziobrowski.controllers.DataController;
 import javafx.beans.property.SimpleFloatProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.ObservableList;
 
+import javax.persistence.*;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.Locale;
 
+
+@Entity(name = "Ticket")
 public class Ticket implements Serializable {
+
+    @Id
+    @GeneratedValue
+    private long id;
+
     transient SimpleStringProperty firstName;
     transient SimpleStringProperty lastName;
+
+    @Enumerated(EnumType.STRING)
     TicketDiscount ticketDiscount;
+    @Enumerated(EnumType.STRING)
     TicketClass ticketClass;
+
     transient SimpleFloatProperty price;
+
+
     Train train;
     public Ticket() {
 
@@ -74,7 +88,7 @@ public class Ticket implements Serializable {
         price = new SimpleFloatProperty(Float.parseFloat(lineSplit[4]));
         train = DataController.getTrain(lineSplit[5]);
     }
-
+//    @Column(name = "firstName")
     public String getFirstName() {
         return firstName.get();
     }

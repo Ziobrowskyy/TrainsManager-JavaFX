@@ -1,7 +1,7 @@
 package com.ziobrowski;
 
 import com.ziobrowski.controllers.DataController;
-import com.ziobrowski.controllers.ExportController;
+import com.ziobrowski.database.DatabaseController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,29 +17,33 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        {
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Import data");
-            alert.setHeaderText(null);
-            alert.setContentText("Do you want to import data from file?");
-            alert.showAndWait();
+//        {
+//            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+//            alert.setTitle("Import data");
+//            alert.setHeaderText(null);
+//            alert.setContentText("Do you want to import data from file?");
+//            alert.showAndWait();
+//
+//
+//            if (alert.getResult() == ButtonType.OK) {
+//                try {
+//                    DatabaseController.importData();
+//                } catch (Exception ignored) {
+//                    ignored.printStackTrace();
+//                    Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+//                    errorAlert.setTitle("Import data");
+//                    errorAlert.setHeaderText(null);
+//                    errorAlert.setContentText("Could not import data from database");
+//                    errorAlert.showAndWait();
+//                    DataController.init();
+//                }
+//            } else {
+//                DataController.init();
+//            }
+//        }
+        DatabaseController.importData();
 
-            if (alert.getResult() == ButtonType.OK) {
-                try {
-                    ExportController.deserialize();
-                } catch (Exception ignored) {
-                    ignored.printStackTrace();
-                    Alert errorAlert = new Alert(Alert.AlertType.ERROR);
-                    errorAlert.setTitle("Import data");
-                    errorAlert.setHeaderText(null);
-                    errorAlert.setContentText("Could not import data from file");
-                    errorAlert.showAndWait();
-                    DataController.init();
-                }
-            } else {
-                DataController.init();
-            }
-        }
+        if (true) return;
         Parent root = FXMLLoader.load(getClass().getResource("/MainLayout.fxml"));
         Scene scene = new Scene(new StackPane(root));
         stage.setScene(scene);
@@ -54,13 +58,13 @@ public class MainApp extends Application {
 
             if (alert.getResult() == ButtonType.OK) {
                 try {
-                    ExportController.serialize();
-                } catch (IOException ignored) {
+                    DatabaseController.exportData();
+                } catch (Exception ignored) {
                     ignored.printStackTrace();
                     Alert errorAlert = new Alert(Alert.AlertType.ERROR);
                     errorAlert.setTitle("Import data");
                     errorAlert.setHeaderText(null);
-                    errorAlert.setContentText("Could not export data to file");
+                    errorAlert.setContentText("Could not export data to database");
                     errorAlert.showAndWait();
                 }
             }

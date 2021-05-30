@@ -1,4 +1,4 @@
-package com.ziobrowski.database;
+package com.ziobrowski.models;
 
 public enum TicketClass {
     FIRST("1st class", 2.0f),

@@ -1,4 +1,4 @@
-package com.ziobrowski.database;
+package com.ziobrowski.models;
 
 import java.util.Locale;
 

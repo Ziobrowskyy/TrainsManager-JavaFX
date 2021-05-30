@@ -1,6 +1,0 @@
-name,type,state,currentCapacity,maxCapacity,firstStation,departureTime,baseTicketPrice
-train 1,CARGO,NEW,0,2,station 6,21:42,45
-train 2,CARGO,NEW,2,3,station 5,21:24,15
-train 3,CARGO,NEW,0,2,station 7,20:05,143
-train 4,CARGO,NEW,0,4,station 6,13:32,40
-train 5,CARGO,NEW,1,1,station 8,10:14,110

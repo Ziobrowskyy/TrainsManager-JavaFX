@@ -1,8 +1,8 @@
 package com.ziobrowski.controllers;
 
-import com.ziobrowski.database.Time;
-import com.ziobrowski.database.Train;
-import com.ziobrowski.database.TrainStation;
+import com.ziobrowski.models.Time;
+import com.ziobrowski.models.Train;
+import com.ziobrowski.models.TrainStation;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.ReadOnlyStringWrapper;

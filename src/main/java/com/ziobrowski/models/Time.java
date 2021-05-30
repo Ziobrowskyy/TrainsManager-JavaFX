@@ -1,10 +1,12 @@
-package com.ziobrowski.database;
+package com.ziobrowski.models;
 
 import com.ziobrowski.Pair;
 import com.ziobrowski.Utils;
 
+import javax.persistence.Embeddable;
 import java.io.Serializable;
 
+@Embeddable
 public class Time implements Serializable {
     int hour;
     int minute;
@@ -26,18 +28,6 @@ public class Time implements Serializable {
 
     //String header = (String) obj.getClass().getMethod("getSCVHeader").invoke(obj);
     //        String[] lines = (List<String>) obj.getClass().getMethod("getCSVData").invoke(obj);
-    public String getSCVHeader() {
-        return "hour,minute";
-    }
-
-    public String[] getCSVData() {
-        return new String[]{hour + "," + minute};
-    }
-
-    public void setFromCSVData(String[] lineSplit) {
-        hour = Integer.parseInt(lineSplit[0]);
-        minute = Integer.parseInt(lineSplit[1]);
-    }
 
     public int toMinutes() {
         return hour * 60 + minute;

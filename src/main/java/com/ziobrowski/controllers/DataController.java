@@ -1,7 +1,7 @@
 package com.ziobrowski.controllers;
 
 import com.ziobrowski.*;
-import com.ziobrowski.database.*;
+import com.ziobrowski.models.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
